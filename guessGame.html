@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<p id="number"></p>
+<p id="demo"></p>
+
+    <script>
+        document.getElementById("number").innerHTML ="input a number between 2 and 9";
+function guess_game(myMax,myMin){
+    return Math.floor(Math.random() * (myMax - myMin + 1)) + myMin;
+}
+
+function myFunction(){
+    var luckyNum=prompt("input your lucky number: ");
+    return luckyNum;
+}
+var luckyNum=prompt("input your lucky number: ");
+var myMax=9;
+var myMin=2;
+if(luckyNum==guess_game(myMax,myMin)){
+   document.getElementById("demo").innerHTML ="congratulations you won";
+}
+else{
+     document.getElementById("demo").innerHTML ="sorry you failed";
+}
+    </script>
+    <button type="button" onclick="myFunction()">press to play</button>
+</body>
+</html>
